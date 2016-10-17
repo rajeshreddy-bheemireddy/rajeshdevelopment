@@ -1,0 +1,40 @@
+<!-----------------------------------------Signup Form start----------------------------------------->
+<section class="section-bg">
+  <div class="container container-bg" width = "50%">
+
+  	<form action="/singupuser" method="post" name="sinupform"  >
+      <fieldset>
+	  <br><center>
+         <legend>Signup Form</legend></center>
+         <p>
+            <label for="firstname">FirstName</label>
+            <input type="text" placeholder = "FirstName" name="name" class="form-control input-sm" size="30"/>
+         </p>
+		 <p>
+            <label for="lastname">LastName</label>
+            <input type="text" placeholder = "LastName" name="last_name" class="form-control input-sm" size="30">
+         </p>
+		 <p>
+            <label for="gender">Gender</label>
+            <input type="text" placeholder = "Gender" name="gender" class="form-control input-sm"  size="30">
+         </p>
+		 <p>
+            <label for="mobile">Mobile Number</label>
+            <input type="text" placeholder = "Mobile Number" name="phone_number" class="form-control input-sm"  size="30">
+         </p>
+         <p>
+            <label for="password">Password</label>
+            <input type="password" placeholder = "Password" name="password" class="form-control input-sm" size="30">
+         </p>
+		 <p>
+            <label for="email">Email</label>
+            <input type="text" placeholder = "Email" name="email" class="form-control input-sm" size="30">
+         </p>
+         <p>
+            <input type="submit" name="submit" value="submit" onclick="return(sinupvalidate());"/>
+         </p>
+      </fieldset>
+   </form>
+  </div>
+</section>
+  <%-message %>

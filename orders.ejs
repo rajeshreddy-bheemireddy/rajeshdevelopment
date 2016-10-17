@@ -1,0 +1,21 @@
+
+<h1>My Orders</h1>
+	  <a style="color: 	Green;" href="/recentorder"><h3>recent Orders</h3></a>
+	<%if(vieworder) {%>
+      <% _.each(vieworder,function(orderdata) { %>
+	            <%_.each(orderdata,function(order) {%>
+				
+				<div><a  style="color: 	Green;" href="orderdetails?id=<%= order.id %>"><td>order id:<%= order.order_id %></td></a>
+					  <%_.each(order.data,function(orders) {%>
+
+					   <table  style="width:50%">
+					 <td>Product Name:<%= orders.p_name %></td>
+					 <td>Order_date:<%=orders.ordered_date%></td>
+					 <td>Price:<%=orders.price%></td>
+					<td>Delivery_details:<%=orders.delivery_details%></td>
+					 <td>Total:<%=orders.total%></td>
+                      </table>
+		         <%})%>
+		      <%})%>
+       <% }) %>
+  <%}%>

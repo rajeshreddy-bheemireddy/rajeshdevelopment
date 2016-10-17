@@ -1,0 +1,34 @@
+
+<div class="container container-bg">
+<div style = "float: left">
+	<h1><font color="blue">orders list</font></h1>
+	<%if(orderdata.data) {%>
+      <% _.each(orderdata.data,function(ordersdata) { %>
+					   
+					  <ul>oderid:<h4><%= ordersdata.id %></h4></ul>
+					 <ul>Product Name:<%= ordersdata.name %></ul>
+					 <ul>Price:<%=ordersdata.price%></ul>
+					<ul>Delivery_details:<%=ordersdata.delivery_details%></ul>
+					 <ul>Total:<%=ordersdata.total%></ul>
+             
+       <% }) %>
+  <%}%></div>
+  <div style = "float: right">
+
+ <h3> <font color="red">ADDRESS</font></h3>
+  	<%if(orderadddata.data) {%>
+  <% _.each(userdata.data, function(addressdata) { %>
+ <h4><ul>Firstname:<%-addressdata.first_name%></ul></h4>
+  <h4><ul>Lastname:<%-addressdata.last_name%></ul></h4>
+  <h4><ul>Mobilenumber:<%-addressdata.phone_number%></ul> 
+   <% }) %>
+  <% _.each(orderadddata.data, function(addressdata) { %>
+  <h4><ul>Country:<%-addressdata.address_country%></ul></h4>
+  <h4><ul>State:<%-addressdata.address_state%></ul></h4>
+ <h4> <ul>City:<%-addressdata.address_city%></ul></h4>
+ <h4><ul>Landmark:<%-addressdata.landmark%></ul></h4>
+ <h4><ul>address:<%-addressdata.address%></ul></h4>
+ <h4><ul>post_code:<%-addressdata.address_postalcode%></ul></h4>
+
+   <% }) %>
+   <%}%></div>	</div>

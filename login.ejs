@@ -1,0 +1,24 @@
+<section class="section-bg">
+  <div class="container container-bg">
+  
+   <form name="loginform" action="/loginuser" method="post">
+   
+      <fieldset>
+         <legend>Login Form</legend>
+		 <span style="color:red"> <%= (!!user)?user: '' %> </span>
+         <p>
+            <label for="username">Username</label>
+            <input id="name" name="name" placeholder = "Username" class="form-control input-sm" type="text">
+         </p>
+         <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" placeholder = "Password" class="form-control input-sm" type="password">
+         </p>
+         <p>
+            <input type="submit" name="submit" onclick="return(loginvalidate());" value="Login"/>
+         </p>
+      </fieldset>
+   </form>
+  </div>
+</section>
+
